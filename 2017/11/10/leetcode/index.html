@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://gameloftyou.github.io">
-  <title>你好啊Hexo | 我的博客</title>
+  <title>Leetcode Solutions | 我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.Two Sum　　Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not use">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好啊Hexo">
-<meta property="og:url" content="https://gameloftyou.github.io/2017/11/10/你好啊Hexo/index.html">
+<meta property="og:title" content="Leetcode Solutions">
+<meta property="og:url" content="https://gameloftyou.github.io/2017/11/10/leetcode/index.html">
 <meta property="og:site_name" content="我的博客">
 <meta property="og:description" content="1.Two Sum　　Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not use">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-10T08:09:35.569Z">
+<meta property="og:updated_time" content="2017-11-10T09:06:10.840Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好啊Hexo">
+<meta name="twitter:title" content="Leetcode Solutions">
 <meta name="twitter:description" content="1.Two Sum　　Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not use">
   
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
@@ -158,19 +158,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-你好啊Hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-leetcode" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      你好啊Hexo
+      Leetcode Solutions
     </h1>
   
 
         
-        <a href="/2017/11/10/你好啊Hexo/" class="archive-article-date">
+        <a href="/2017/11/10/leetcode/" class="archive-article-date">
   	<time datetime="2017-11-10T08:02:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
 </a>
         
@@ -183,49 +183,13 @@
 <blockquote>
 <p>Given nums = [2, 7, 11, 15], target = 9,<br>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        for(int i=0;i&lt;nums.size();++i)</span><br><span class="line">        &#123;</span><br><span class="line">            auto iter = find(nums.begin()+i+1,nums.end(),target-nums[i]);</span><br><span class="line">            if(iter!=nums.end())</span><br><span class="line">            &#123;</span><br><span class="line">                return &#123;i,iter-nums.begin()&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.size();++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">auto</span> iter = find(nums.begin()+i+<span class="number">1</span>,nums.end(),target-nums[i]);</span><br><span class="line">            <span class="keyword">if</span>(iter!=nums.end())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;i,iter-nums.begin()&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><font color="red"><strong>2.Add Two Numbers</strong></font><br>　　You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.<br>You may assume the two numbers do not contain any leading zero, except the number 0 itself.  </p>
 <p>Example:</p>
 <blockquote>
 <p><strong>Input</strong>: (2 -4 -3) + (5 -6 -4)<br><strong>Output</strong>: 7 -0 -8  </p>
 </blockquote>
-<pre><code>/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        if(l1==nullptr) return l2;
-        if(l2==nullptr) return l1;
-        ListNode *result = nullptr;
-        ListNode *p = nullptr;
-        int up = 0;
-        while(l1!=nullptr||l2!=nullptr||up!=0)
-        {
-            int sum = (l1!=nullptr?l1-&gt;val:0)+(l2!=nullptr?l2-&gt;val:0)+up;
-            if(p==nullptr)
-            {
-                result = new ListNode(sum%10);
-                p = result;
-            }
-            else
-            {
-                p-&gt;next = new ListNode(sum%10);
-                p = p-&gt;next;
-            }
-            up = sum/10;
-            if(l1!=nullptr) l1 = l1-&gt;next;
-            if(l2!=nullptr) l2 = l2-&gt;next;
-        }
-        return result;
-    }
-};
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">addTwoNumbers</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l1==<span class="literal">nullptr</span>) <span class="keyword">return</span> l2;</span><br><span class="line">        <span class="keyword">if</span>(l2==<span class="literal">nullptr</span>) <span class="keyword">return</span> l1;</span><br><span class="line">        ListNode *result = <span class="literal">nullptr</span>;</span><br><span class="line">        ListNode *p = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">int</span> up = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l1!=<span class="literal">nullptr</span>||l2!=<span class="literal">nullptr</span>||up!=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = (l1!=<span class="literal">nullptr</span>?l1-&gt;val:<span class="number">0</span>)+(l2!=<span class="literal">nullptr</span>?l2-&gt;val:<span class="number">0</span>)+up;</span><br><span class="line">            <span class="keyword">if</span>(p==<span class="literal">nullptr</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                result = <span class="keyword">new</span> ListNode(sum%<span class="number">10</span>);</span><br><span class="line">                p = result;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                p-&gt;next = <span class="keyword">new</span> ListNode(sum%<span class="number">10</span>);</span><br><span class="line">                p = p-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            up = sum/<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(l1!=<span class="literal">nullptr</span>) l1 = l1-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(l2!=<span class="literal">nullptr</span>) l2 = l2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -304,7 +268,7 @@ public:
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://gameloftyou.github.io/2017/11/10/你好啊Hexo/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://gameloftyou.github.io/2017/11/10/leetcode/" alt="微信分享二维码">
     </div>
 </div>
 
