@@ -96,23 +96,8 @@
 <blockquote>
 <p>Given nums = [2, 7, 11, 15], target = 9,<br>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].  </p>
 </blockquote>
-<pre><code>#include &lt;algorithm&gt;
-
-class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        for(int i=0;i&lt;nums.size();++i)
-        {
-            auto iter = find(nums.begin()+i+1,nums.end(),target-nums[i]);
-            if(iter!=nums.end())
-            {
-                return {i,iter-nums.begin()};
-            }
-        }
-        return {};
-    }
-};
-</code></pre><p><font color="red"><strong>2.Add Two Numbers</strong></font><br>　　You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.<br>You may assume the two numbers do not contain any leading zero, except the number 0 itself.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        for(int i=0;i&lt;nums.size();++i)</span><br><span class="line">        &#123;</span><br><span class="line">            auto iter = find(nums.begin()+i+1,nums.end(),target-nums[i]);</span><br><span class="line">            if(iter!=nums.end())</span><br><span class="line">            &#123;</span><br><span class="line">                return &#123;i,iter-nums.begin()&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><font color="red"><strong>2.Add Two Numbers</strong></font><br>　　You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.<br>You may assume the two numbers do not contain any leading zero, except the number 0 itself.  </p>
 <p>Example:</p>
 <blockquote>
 <p><strong>Input</strong>: (2 -4 -3) + (5 -6 -4)<br><strong>Output</strong>: 7 -0 -8  </p>
@@ -157,7 +142,7 @@ public:
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gameloftyou.github.io/2017/11/10/你好啊Hexo/" data-id="cj9tm9xqc0001ccnzs6lkcpah" class="article-share-link">Share</a>
+      <a data-url="https://gameloftyou.github.io/2017/11/10/你好啊Hexo/" data-id="cj9tmgchr0001c0nzb6gdq4sg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -202,7 +187,7 @@ public:
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gameloftyou.github.io/2017/11/10/hello-world/" data-id="cj9tm9xp60000ccnzoqgnj1rd" class="article-share-link">Share</a>
+      <a data-url="https://gameloftyou.github.io/2017/11/10/hello-world/" data-id="cj9tmgchj0000c0nzccc1xrhz" class="article-share-link">Share</a>
       
       
     </footer>
